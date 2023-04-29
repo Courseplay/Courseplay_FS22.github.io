@@ -42,9 +42,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        # Moving the data to another folder, so the workflow from courseplay works correctly!
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
           author_name: Your Name
           author_email: mail@example.com
-          message: 'Your commit message'
+          message: 'Moved translation data'
