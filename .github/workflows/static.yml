@@ -46,5 +46,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      - name: Commit moved file
-        uses: stefanzweifel/git-auto-commit-action@v4
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        # with:
+        #   author_name: Your Name
+        #   author_email: mail@example.com
+        #   message: 'Your commit message'
