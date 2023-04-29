@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: |
-          if [ ! -d data ]; then
+          if [ -d data ]; then
             rm -d translation_data
             mv data translation_data
           fi
