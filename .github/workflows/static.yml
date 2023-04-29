@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v3
       - run: |
           if [ -d data ]; then
-            rm -d translation_data
+            rm -r translation_data
             mv data translation_data
           fi
       - name: Setup Pages
