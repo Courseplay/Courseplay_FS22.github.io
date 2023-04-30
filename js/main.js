@@ -123,7 +123,7 @@
     function applyImage(root, id, image, alt){
         if(image && image.filename){
             img = root.querySelector("#"+id)
-            img.src = image.filename;
+            img.src = "translation_data/"+image.filename;
             img.width = image.size[0];
             img.height = image.size[0];
             img.alt = alt
