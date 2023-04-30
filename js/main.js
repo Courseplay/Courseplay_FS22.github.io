@@ -72,7 +72,7 @@
     function applyHeaders(categories)
     {
         applyRawText(document, "header_category_title", categories.title);
-        setText(document, "header_category_sub_title", "CP_help_subTitle");
+        setText(document, "header_category_sub_title", "CP_help_subTitle", true);
         applyRawText(document, "menu_category_title", categories.title);
     }
 
