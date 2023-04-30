@@ -131,7 +131,7 @@
     }
 
     function applyRawText(root, id, text){
-        if(text!=null){
+        if(text!=null && text.raw){
             setText(root, id, text.raw, true);
         }else{
             setText(root, id, text, true);
