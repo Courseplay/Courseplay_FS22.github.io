@@ -106,6 +106,7 @@
             let node = paragraph_template.cloneNode(true);
             applyRawText(node, "content_paragraph_template_title", paragraph.title);
             applyRawText(node, "content_paragraph_template_text", paragraph.text);
+            applyImage(node, "content_paragraph_template_image", paragraph.image, paragraph.text.raw);
             root.appendChild(node); 
             
         }
@@ -117,6 +118,16 @@
 
     function applyHref(root, id, href){
         root.querySelector("#"+id).href = "#"+href;
+    }
+
+    function applyImage(root, id, image, alt){
+        if(image && image.filename){
+            img = root.querySelector("#"+id)
+            img.src = image.filename;
+            img.width = image.size[0];
+            img.height = image.size[0];
+            img.alt = alt
+        }
     }
 
     function applyRawText(root, id, text){
