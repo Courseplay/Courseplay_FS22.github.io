@@ -6,7 +6,8 @@
         return {
             layout: document.getElementById('layout'),
             menu: document.getElementById('menu'),
-            menuLink: document.getElementById('menuLink')
+            menuLink: document.getElementById('menuLink'),
+			languages: document.getElementById('languages')
         };
     }
 
@@ -40,7 +41,10 @@
     
     function handleEvent(e) {
         var elements = getElements();
-        
+		if (e.target.id === elements.languages.id){
+			return;
+		}
+
         if (e.target.id === elements.menuLink.id) {
             toggleAll();
             e.preventDefault();
