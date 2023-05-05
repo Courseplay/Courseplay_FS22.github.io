@@ -83,7 +83,7 @@
             let node = menu_page_template.cloneNode(true);
             applyHref(node, "menu_page_template_title", page.title.raw)
             applyRawText(node, "menu_page_template_title", page.title);
-            document.querySelector("#menu_page_list").appendChild(node); 
+            $('#menu_about').before( node )
         }
         removeElement(menu_page_template);
         // Page content
